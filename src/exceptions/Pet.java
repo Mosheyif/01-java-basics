@@ -73,7 +73,11 @@ public class Pet {
         this.name = name;
     }
 
+    /**
+     * default Pet's output
+     */
     public void saySomething() {
+
         System.out.println("I'm a pet");
     }
 
