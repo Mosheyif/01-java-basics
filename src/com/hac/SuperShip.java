@@ -1,15 +1,15 @@
 package com.hac;
 
-/** a simple SuperShip class
- *  with public methods and  encapsulated member.
- *
+/** a Ship class that demonstrates inheritance and basic polymorphism
+ * that has a speed attribute, and implements the Printable interface
  */
-public class SuperShip extends Ship {
+public class SuperShip extends Ship implements Printable {
     private int speed;
 
     /**
      * ctor for SuperShip using speed
-     * @param speed the speed of the ship
+     * @param speed the speed of the ship. What if we want to enforce a positive speed?
+     *              We can throw an exception if speed is negative.
      */
     public SuperShip(int speed) {
         this.setSpeed(speed);
@@ -30,5 +30,13 @@ public class SuperShip extends Ship {
      */
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    /**
+     * print out the speed of the ship
+     */
+    @Override
+    public void print() {
+        System.out.println("SuperShip with speed: " + speed);
     }
 }

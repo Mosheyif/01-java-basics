@@ -13,13 +13,13 @@ public class Ship {
     private int positionY;
 
 
-    /** move the SuperShip by some distance
+    /** move the Ship by some distance
      * @param distance the value to add to x/y
      */
     public void moveBy(int distance){
         positionX += distance;
         setPositionY(getPositionY() + distance);
-        System.out.printf("navigating...");
+        System.out.print("navigating...");
     }
 
     /**
@@ -56,15 +56,7 @@ public class Ship {
 
     @Override
     public String toString() {
-
         return "X=" + positionX + ", Y=" + getPositionY();
     }
 
-    /**
-     * build a ship at position 0,0
-     */
-    void SuperShip() {
-        setPositionX(0);
-        setPositionY(0);
-    }
 }
