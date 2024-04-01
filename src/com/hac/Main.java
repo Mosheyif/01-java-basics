@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] args) {
         SuperShip s;
         // create an instance of SuperShip (an object)
-        if (args.length > 2)
-            s = new SuperShip(Integer.parseInt(args[1]));
+        if (args.length > 0)
+            s = new SuperShip(Integer.parseInt(args[0]));
         else
             s = new SuperShip(4);
 
@@ -25,6 +25,7 @@ public class Main {
         // this allows you to rename a method easily (it will replace the name everywhere)
         s.moveBy(100);
         s.print();
+
 
         System.out.println(s); // uses the toString method
 

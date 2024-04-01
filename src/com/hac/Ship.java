@@ -1,7 +1,7 @@
 package com.hac;
 
 /**
- * Ship class to demonstrate inheritance and basic polymorphism.
+ * Printable interface to demonstrate interfaces and polymorphism.
  */
 public class Ship {
     public final static int OK = 1;
@@ -13,8 +13,9 @@ public class Ship {
     private int positionY;
 
 
-    /** move the Ship by some distance
-     * @param distance the value to add to x/y
+    /**
+     * constructor
+     * @param distance the distance to move
      */
     public void moveBy(int distance){
         positionX += distance;
