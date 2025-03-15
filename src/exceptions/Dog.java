@@ -1,18 +1,18 @@
 package exceptions;
 
 /**
- * Dogs!!
+ * Dog class, a subclass of Pet
+
  */
 public class Dog extends Pet {
 
     private String specyName;
 
     /**
-     * ctor for Dog
-     * @param specyName the name of the species
+     * Dog constructor
+     * @param specyName the specy name of the dog
      * @param owner the owner of the dog
-     * @throws DogException if specyName is null
-     *
+     * @throws DogException if the specy name is null
      */
     public Dog (String specyName, String owner) throws DogException {
         super(specyName, owner);
@@ -21,9 +21,6 @@ public class Dog extends Pet {
             throw new DogException("Dog specy name cannot be null");
     }
 
-    /** Dog says something
-     * @see Pet#saySomething()
-     */
     @Override
     public void saySomething() {
         System.out.println("bark bark!");

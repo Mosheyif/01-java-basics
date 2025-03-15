@@ -4,15 +4,18 @@ package com.hac;
  * Printable interface to demonstrate interfaces and polymorphism.
  */
 public class Ship {
-    public final static int OK = 1;
-    /**
-     * size of ship
-     */
-    public static int SIZE = 10;
     protected int positionX;
     private int positionY;
 
-
+    /**
+     * constructor
+     * @param positionX the x coordinate of the ship
+     * @param positionY the y coordinate of the ship
+     */
+    public Ship(int positionX, int positionY) {
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
     /**
      * constructor
      * @param distance the distance to move
@@ -56,6 +59,9 @@ public class Ship {
     }
 
     @Override
+    /** print out the position of the ship
+     * @see java.lang.Object#toString()
+     */
     public String toString() {
         return "X=" + positionX + ", Y=" + getPositionY();
     }

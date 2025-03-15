@@ -10,7 +10,7 @@ public class ReferencesExplained {
 
     public void giveMeHello (String s)
     {
-        s = "Hello";
+        s = new String("Hello"); // note this is equivalent to s = "Hello";
         // s is modified locally but not outside the function
         // because Java pass object references by value
     }

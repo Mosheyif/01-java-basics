@@ -3,7 +3,7 @@ package exceptions;
 /**
  * a class describing Pets
  */
-public class Pet {
+public abstract class Pet {
     private String name;
     private String owner;
 
@@ -77,8 +77,6 @@ public class Pet {
      * default Pet's output
      */
     public void saySomething() {
-
         System.out.println("I'm a pet");
     }
-
 }

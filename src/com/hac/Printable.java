@@ -5,5 +5,8 @@ package com.hac;
  */
 public interface Printable {
 
+    /**
+     * print out the object
+     */
     void print();
 }

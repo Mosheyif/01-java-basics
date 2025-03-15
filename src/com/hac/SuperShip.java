@@ -7,11 +7,15 @@ public class SuperShip extends Ship implements Printable {
     private int speed;
 
     /**
-     * ctor for SuperShip using speed
-     * @param speed the speed of the ship. What if we want to enforce a positive speed?
-     *              We can throw an exception if speed is negative.
+     * constructor
+     * @param speed the speed of the ship
+     *              throws IllegalArgumentException if speed is negative
+     *              calls the parent constructor with 0, 0
      */
     public SuperShip(int speed) {
+        super(0, 0); // call the parent ctor - must be the first statement!
+        if (speed < 0)
+            throw new IllegalArgumentException("Speed cannot be negative");
         this.setSpeed(speed);
     }
 
@@ -27,8 +31,11 @@ public class SuperShip extends Ship implements Printable {
     /**
      * setter for speed
      * @param speed the speed of the ship
+     *              throws IllegalArgumentException if speed is negative
      */
     public void setSpeed(int speed) {
+        if (speed < 0)
+            throw new IllegalArgumentException("Speed cannot be negative");
         this.speed = speed;
     }
 
