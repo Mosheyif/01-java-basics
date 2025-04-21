@@ -1,0 +1,32 @@
+{
+  "COUNT_LEVELS": {
+    "warning": 21,
+    "error": 19,
+    "info": 44
+  },
+  "DETECT_ANOMALIES": [
+    {"server1.log": {
+      "anomalies": ["2025-03-15 10:08:00"],
+      "anomalies_count": 1
+    }},
+    {"database.log": {
+      "anomalies": ["2025-03-15 11:00:00"],
+      "anomalies_count": 1
+    }},
+    {"server2.log": {
+      "anomalies": [
+        "2025-03-15 11:20:00",
+        "2025-03-15 10:30:00"
+      ],
+      "anomalies_count": 2
+    }}
+  ],
+  "FIND_COMMON_SOURCE": {
+    "least_common_source_count": 24,
+    "sources": "[Server1, Server2, Database]",
+    "source_counts": "[24, 30, 30]",
+    "most_common_source": "Database",
+    "least_common_source": "Server1",
+    "most_common_source_count": 30
+  }
+}
